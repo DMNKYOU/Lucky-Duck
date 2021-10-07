@@ -1,0 +1,52 @@
+﻿.duck-image-container {
+    display: inline-block;
+    background-color: white;
+    width: 300px;
+    height: 300px;
+}
+
+.duck-image-container .duck-image {
+    max-width: 100%;
+    max-height: 100%;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.shop-button-container,
+.lottery-button-container {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.btn-hove:focus,
+.custom-control-label:focus {
+    outline: none;
+    transition: .5s;
+}
+
+
+/*.bt-appear {
+    opacity: 0;
+    transition: 1s;
+}
+
+#customCheck1:checked ~ .bt-appear {
+    opacity: 1;
+    transition: 1s;
+}*/
+
+.shop-button-container .btn,
+.lottery-button-container .btn {
+    width: 100px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

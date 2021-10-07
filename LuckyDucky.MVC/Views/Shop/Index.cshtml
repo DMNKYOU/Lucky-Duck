@@ -1,0 +1,63 @@
+﻿@model LuckyDucky.MVC.Models.ContactMeModel;
+
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = Localizer["title"];
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+
+    string patternName = "";
+    if (requestCulture.RequestCulture.Culture.Name == "en")
+    {
+        patternName = @"[A-Za-z]*([A-Za-z]*|[ ]?)*[A-Za-z]+";//@"^[а-яА-Яa-zA-Z]+$";
+    }
+    else
+    {
+        patternName = @"([A-Za-z]*([A-Za-z]*|[ ]?)*[A-Za-z]+)|([A-Яа-я]*([А-Яа-я]*|[ ]?)*[А-Яа-я]+)";//[A-Яа-я]*([А-Яа-я]*|[ ]?)*[А-Яа-я]+";
+    }
+
+    string patternEmail = @"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$";
+}
+
+<h2>@Localizer["title"]</h2>
+
+<div class="container col-md-6 col-md-offset-4 mt-4">
+    @{ if (!(bool)Model.ContactMeInfo.IsContactMeRequested)
+        {
+    <form class="bg-light p-3" method="post" asp-controller="Shop">
+        <h4 class="text-center mt-4">@Localizer["Contact Me"]</h4>
+        <div class="form-group">
+            <label asp-for="Email"></label>
+            <input type="email" asp-for="Email" class="form-control" pattern=@patternEmail required>
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+        <div class="form-group">
+            <label asp-for="Name"></label>
+            <input type="text" asp-for="Name" class="form-control" maxlength="100" pattern=@patternName id="Name" required>
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+        <div class="form-group">
+            <label asp-for="Message"></label>
+            <textarea typeof="text" class="form-control" asp-for="Message" rows="3" maxlength="1000" required></textarea>
+            @Html.ValidationMessageFor(model => model.Message)
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary" id="Submit">@Localizer["Submit"]</button>
+        </div>
+    </form>
+        }
+
+        else
+        {
+                <p>
+                    <h5>
+                        @Model.ContactMeInfo.UserName@Localizer["afterAppealMessage"]
+                    </h5>
+                </p>
+        }
+    }
+</div>

@@ -1,0 +1,85 @@
+﻿@model LuckyDucky.MVC.Models.LotteryPageModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = Localizer["title"];
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string patternName = "^[a-zA-Z]+$";
+    string patternEmail = @"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*";
+}
+
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container">
+            <h2>@Localizer["title"]</h2>
+
+            @if (@Model.projectSettingsModel != null)
+            {
+                <div class="text-right">
+                    <h4 class="text-center font-weight-bold p-3">
+                        @*@Localizer["NextDateTimeLottery"] :*@ @Model.projectSettingsModel.NextLotteryUtcDateTime.ToString("dddd, dd MMMM yyyy HH:mm")
+                    </h4>
+                </div>
+            }
+
+            @if (User.HasClaim("IsAdminLottery", "true"))
+            {
+                @*<div class="text-dark">*@
+                <h4>
+                    <a class="nav-link icon-wrench float-right text-dark" asp-area="" asp-controller="ManageLottery" asp-action="Index">
+                        <img src="~/images/home/baseline_settings_black_18dp-.png">
+                        Manage
+                    </a>
+                </h4>
+                @*</div>*@
+            }
+        </div>
+    </nav>
+
+    <div>
+        <h4 class="text-center font-weight-bold p-3">@Localizer["takePart"]</h4>
+        <form class="bg-light" method="post" asp-controller="Lottery" asp-action="Index">
+            @if (Model.takePartModel.IsAlwaysTakePartCheck)
+            {
+                <div class="row p-3">
+                    <div class="col">
+                        <label asp-for="takePartModel.Name"></label>
+                        <input type="text" class="form-control" asp-for="takePartModel.Name" disabled />
+                    </div>
+                    <div class="col">
+                        <label asp-for="takePartModel.Email"></label>
+                        <input type="email" class="form-control" asp-for="takePartModel.Email" disabled />
+                    </div>
+                </div>
+                <div class="text-center custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1" checked asp-for="takePartModel.IsAlwaysTakePartCheck" disabled>
+                    <label class="custom-control-label" for="customCheck1">@Localizer["alwaysTakePart"]@*Always Take Part*@</label>
+                </div>
+                <div class="p-3 text-center">
+                    <button type="submit" class="btn btn-primary">@Localizer["submitAlwaysTakePartChecked"]@*Do Not Take Part*@</button>
+                </div>
+            }
+            else
+            {
+                <div class="row p-3">
+                    <div class="col">
+                        <label asp-for="takePartModel.Name"></label>
+                        <input name="Name" type="text" class="form-control" asp-for="takePartModel.Name" pattern="@patternName" maxlength="100" required />
+                        <span asp-validation-for="takePartModel.Name"></span>
+                    </div>
+                    <div class="col">
+                        <label asp-for="takePartModel.Email"></label>
+                        <input name="Email" type="text" class="form-control" asp-for="takePartModel.Email" pattern="@patternEmail" required />
+                        <span asp-validation-for="takePartModel.Email"></span>
+                    </div>
+                </div>
+                <div class="text-center custom-control custom-checkbox">
+                    <input name="IsAlwaysTakePartCheck" type="checkbox" class="custom-control-input" id="customCheck1" asp-for="takePartModel.IsAlwaysTakePartCheck" />
+                    <label class="custom-control-label" for="customCheck1">@Localizer["alwaysTakePart"]</label>
+                </div>
+                <div class="p-3 text-center">
+                    <button type="submit" class="btn btn-primary">@Localizer["submitTakePart"]@*Take part*@</button>
+                </div>
+            }
+        </form>
+    </div>

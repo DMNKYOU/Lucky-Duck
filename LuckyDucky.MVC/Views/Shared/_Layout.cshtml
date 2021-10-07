@@ -1,0 +1,91 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Options
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
+        .ToList();
+    var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] "LuckyDucky"</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/home.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Lucky Ducky</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">@Localizer["HomeTitle"]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Lottery" asp-action="Index">@Localizer["LotteryTitle"]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Shop" asp-action="Index">@Localizer["ShopTitle"]</a>
+                        </li>
+                    </ul>
+                </div>
+                <partial name="_LoginPartial" />
+                <div class="ml-2">
+                    <div title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name" class="btn-group" role="group" aria-label="Basic example">
+                        <form asp-controller="Home"
+                              asp-action="SetLanguage" asp-route-returnUrl="@returnUrl"
+                              method="post" role="form">
+                            <button name="culture"
+                                    onclick="this.form.submit();"
+                                    class="btn bg-transparent text-primary shadow-none"
+                                    value="ru" @(requestCulture.RequestCulture.Culture.Name == "ru" ? "hidden" : "")>
+                                RU
+                            </button>
+
+                            <button name="culture"
+                                    onclick="this.form.submit();"
+                                    class="btn bg-transparent text-primary shadow-none"
+                                    value="en" @(requestCulture.RequestCulture.Culture.Name == "en" ? "hidden" : "")>
+                                EN
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+           
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <a>&copy; @Localizer["CopyRights"]</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
