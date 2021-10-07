@@ -1,0 +1,23 @@
+/Users/dima/luckyDu/LuckyDucky/LuckyDucky.Lottery/bin/Debug/netstandard2.0/LuckyDucky.Lottery.deps.json
+/Users/dima/luckyDu/LuckyDucky/LuckyDucky.Lottery/bin/Debug/netstandard2.0/LuckyDucky.Lottery.dll
+/Users/dima/luckyDu/LuckyDucky/LuckyDucky.Lottery/bin/Debug/netstandard2.0/LuckyDucky.Lottery.pdb
+/Users/dima/luckyDu/LuckyDucky/LuckyDucky.Lottery/obj/Debug/netstandard2.0/LuckyDucky.Lottery.csprojAssemblyReference.cache
+/Users/dima/luckyDu/LuckyDucky/LuckyDucky.Lottery/obj/Debug/netstandard2.0/LuckyDucky.Lottery.AssemblyInfoInputs.cache
+/Users/dima/luckyDu/LuckyDucky/LuckyDucky.Lottery/obj/Debug/netstandard2.0/LuckyDucky.Lottery.AssemblyInfo.cs
+/Users/dima/luckyDu/LuckyDucky/LuckyDucky.Lottery/obj/Debug/netstandard2.0/LuckyDucky.Lottery.dll
+/Users/dima/luckyDu/LuckyDucky/LuckyDucky.Lottery/obj/Debug/netstandard2.0/LuckyDucky.Lottery.pdb
+/Users/dima/Downloads/LuckyDucky/LuckyDucky.Lottery/bin/Debug/netstandard2.0/LuckyDucky.Lottery.deps.json
+/Users/dima/Downloads/LuckyDucky/LuckyDucky.Lottery/bin/Debug/netstandard2.0/LuckyDucky.Lottery.dll
+/Users/dima/Downloads/LuckyDucky/LuckyDucky.Lottery/bin/Debug/netstandard2.0/LuckyDucky.Lottery.pdb
+/Users/dima/Downloads/LuckyDucky/LuckyDucky.Lottery/obj/Debug/netstandard2.0/LuckyDucky.Lottery.AssemblyInfoInputs.cache
+/Users/dima/Downloads/LuckyDucky/LuckyDucky.Lottery/obj/Debug/netstandard2.0/LuckyDucky.Lottery.AssemblyInfo.cs
+/Users/dima/Downloads/LuckyDucky/LuckyDucky.Lottery/obj/Debug/netstandard2.0/LuckyDucky.Lottery.dll
+/Users/dima/Downloads/LuckyDucky/LuckyDucky.Lottery/obj/Debug/netstandard2.0/LuckyDucky.Lottery.pdb
+/Users/dima/Downloads/LuckyDucky 3/LuckyDucky.Lottery/bin/Debug/netstandard2.0/LuckyDucky.Lottery.deps.json
+/Users/dima/Downloads/LuckyDucky 3/LuckyDucky.Lottery/bin/Debug/netstandard2.0/LuckyDucky.Lottery.dll
+/Users/dima/Downloads/LuckyDucky 3/LuckyDucky.Lottery/bin/Debug/netstandard2.0/LuckyDucky.Lottery.pdb
+/Users/dima/Downloads/LuckyDucky 3/LuckyDucky.Lottery/obj/Debug/netstandard2.0/LuckyDucky.Lottery.csprojAssemblyReference.cache
+/Users/dima/Downloads/LuckyDucky 3/LuckyDucky.Lottery/obj/Debug/netstandard2.0/LuckyDucky.Lottery.AssemblyInfoInputs.cache
+/Users/dima/Downloads/LuckyDucky 3/LuckyDucky.Lottery/obj/Debug/netstandard2.0/LuckyDucky.Lottery.AssemblyInfo.cs
+/Users/dima/Downloads/LuckyDucky 3/LuckyDucky.Lottery/obj/Debug/netstandard2.0/LuckyDucky.Lottery.dll
+/Users/dima/Downloads/LuckyDucky 3/LuckyDucky.Lottery/obj/Debug/netstandard2.0/LuckyDucky.Lottery.pdb

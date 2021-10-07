@@ -1,0 +1,24 @@
+/Users/dima/luckyDu/LuckyDucky/LuckyDucky.MailService/bin/Debug/netstandard2.0/LuckyDucky.MailService.deps.json
+/Users/dima/luckyDu/LuckyDucky/LuckyDucky.MailService/bin/Debug/netstandard2.0/LuckyDucky.MailService.dll
+/Users/dima/luckyDu/LuckyDucky/LuckyDucky.MailService/bin/Debug/netstandard2.0/LuckyDucky.MailService.pdb
+/Users/dima/luckyDu/LuckyDucky/LuckyDucky.MailService/obj/Debug/netstandard2.0/LuckyDucky.MailService.csprojAssemblyReference.cache
+/Users/dima/luckyDu/LuckyDucky/LuckyDucky.MailService/obj/Debug/netstandard2.0/LuckyDucky.MailService.AssemblyInfoInputs.cache
+/Users/dima/luckyDu/LuckyDucky/LuckyDucky.MailService/obj/Debug/netstandard2.0/LuckyDucky.MailService.AssemblyInfo.cs
+/Users/dima/luckyDu/LuckyDucky/LuckyDucky.MailService/obj/Debug/netstandard2.0/LuckyDucky.MailService.dll
+/Users/dima/luckyDu/LuckyDucky/LuckyDucky.MailService/obj/Debug/netstandard2.0/LuckyDucky.MailService.pdb
+/Users/dima/Downloads/LuckyDucky/LuckyDucky.MailService/bin/Debug/netstandard2.0/LuckyDucky.MailService.deps.json
+/Users/dima/Downloads/LuckyDucky/LuckyDucky.MailService/bin/Debug/netstandard2.0/LuckyDucky.MailService.dll
+/Users/dima/Downloads/LuckyDucky/LuckyDucky.MailService/bin/Debug/netstandard2.0/LuckyDucky.MailService.pdb
+/Users/dima/Downloads/LuckyDucky/LuckyDucky.MailService/obj/Debug/netstandard2.0/LuckyDucky.MailService.csprojAssemblyReference.cache
+/Users/dima/Downloads/LuckyDucky/LuckyDucky.MailService/obj/Debug/netstandard2.0/LuckyDucky.MailService.AssemblyInfoInputs.cache
+/Users/dima/Downloads/LuckyDucky/LuckyDucky.MailService/obj/Debug/netstandard2.0/LuckyDucky.MailService.AssemblyInfo.cs
+/Users/dima/Downloads/LuckyDucky/LuckyDucky.MailService/obj/Debug/netstandard2.0/LuckyDucky.MailService.dll
+/Users/dima/Downloads/LuckyDucky/LuckyDucky.MailService/obj/Debug/netstandard2.0/LuckyDucky.MailService.pdb
+/Users/dima/Downloads/LuckyDucky 3/LuckyDucky.MailService/bin/Debug/netstandard2.0/LuckyDucky.MailService.deps.json
+/Users/dima/Downloads/LuckyDucky 3/LuckyDucky.MailService/bin/Debug/netstandard2.0/LuckyDucky.MailService.dll
+/Users/dima/Downloads/LuckyDucky 3/LuckyDucky.MailService/bin/Debug/netstandard2.0/LuckyDucky.MailService.pdb
+/Users/dima/Downloads/LuckyDucky 3/LuckyDucky.MailService/obj/Debug/netstandard2.0/LuckyDucky.MailService.csprojAssemblyReference.cache
+/Users/dima/Downloads/LuckyDucky 3/LuckyDucky.MailService/obj/Debug/netstandard2.0/LuckyDucky.MailService.AssemblyInfoInputs.cache
+/Users/dima/Downloads/LuckyDucky 3/LuckyDucky.MailService/obj/Debug/netstandard2.0/LuckyDucky.MailService.AssemblyInfo.cs
+/Users/dima/Downloads/LuckyDucky 3/LuckyDucky.MailService/obj/Debug/netstandard2.0/LuckyDucky.MailService.dll
+/Users/dima/Downloads/LuckyDucky 3/LuckyDucky.MailService/obj/Debug/netstandard2.0/LuckyDucky.MailService.pdb
